@@ -2,11 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 
 namespace PrefabExporter.Editor
 {
-    [MovedFrom(true, "ParticleExporter.Editor", null, "ParticlePackageExporterWindow")]
     internal sealed class PrefabPackageExporterWindow : EditorWindow
     {
         private const string WindowMenu = "Tools/Prefab Package Exporter";

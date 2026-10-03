@@ -24,16 +24,18 @@ Unity 6000.3.15f1 üzerinde doğrulanmıştır. Aracın ek runtime kütüphane v
 3. Aşağıdaki URL'yi yapıştır:
 
 ```text
-https://github.com/kameryurdakull/ParticleExporter.git?path=/Packages/com.kameryurdakull.prefab-exporter
+https://github.com/kameryurdakull/PrefabExporter.git?path=/Packages/com.kameryurdakull.prefab-exporter
 ```
+
+Bu URL, GitHub deposunun **PrefabExporter** adıyla yayınlandığını varsayar.
 
 Alternatif olarak projenin `Packages/manifest.json` dosyasındaki `dependencies` nesnesine ekle:
 
 ```json
-"com.kameryurdakull.prefab-exporter": "https://github.com/kameryurdakull/ParticleExporter.git?path=/Packages/com.kameryurdakull.prefab-exporter"
+"com.kameryurdakull.prefab-exporter": "https://github.com/kameryurdakull/PrefabExporter.git?path=/Packages/com.kameryurdakull.prefab-exporter"
 ```
 
-Eski kurulumu `Assets/ParticleExporter/Editor` altına kopyaladıysan UPM kurulumundan önce bu eski **Editor** klasörünü kaldır. İki kurulum aynı anda tutulmamalıdır; kendi prefablarını silmen gerekmez.
+Eski sürümü `Assets/` altına elle kopyaladıysan UPM kurulumundan önce aracın eski **Editor** klasörünü kaldır. İki kurulum aynı anda tutulmamalıdır; kendi prefablarını silmen gerekmez.
 
 ## Hızlı başlangıç
 
