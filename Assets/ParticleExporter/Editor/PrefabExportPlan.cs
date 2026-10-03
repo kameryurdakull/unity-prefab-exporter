@@ -5,9 +5,9 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace ParticleExporter.Editor
+namespace PrefabExporter.Editor
 {
-    internal sealed class ParticleExportPlan
+    internal sealed class PrefabExportPlan
     {
         private const string AssetsPrefix = "Assets/";
         private const string PackagesPrefix = "Packages/";
@@ -22,7 +22,7 @@ namespace ParticleExporter.Editor
         public IReadOnlyList<string> PackageDependencies { get; }
         public IReadOnlyList<string> Warnings { get; }
 
-        private ParticleExportPlan(
+        private PrefabExportPlan(
             IReadOnlyList<string> prefabPaths,
             IReadOnlyList<string> assetPaths,
             IReadOnlyList<string> packageDependencies,
@@ -34,7 +34,7 @@ namespace ParticleExporter.Editor
             Warnings = warnings;
         }
 
-        public static ParticleExportPlan Create(IEnumerable<GameObject> prefabs)
+        public static PrefabExportPlan Create(IEnumerable<GameObject> prefabs)
         {
             if (prefabs == null)
             {
@@ -51,7 +51,7 @@ namespace ParticleExporter.Editor
 
             if (prefabPaths.Length == 0)
             {
-                throw new InvalidOperationException("Select at least one particle prefab asset.");
+                throw new InvalidOperationException("Select at least one prefab asset.");
             }
 
             var warnings = new List<string>();
@@ -85,7 +85,7 @@ namespace ParticleExporter.Editor
 
             AddScriptAssemblyFiles(assetPaths);
 
-            return new ParticleExportPlan(
+            return new PrefabExportPlan(
                 prefabPaths,
                 assetPaths.OrderBy(path => path, StringComparer.Ordinal).ToArray(),
                 packages.OrderBy(name => name, StringComparer.Ordinal).ToArray(),
@@ -121,11 +121,6 @@ namespace ParticleExporter.Editor
             if (prefab == null || PrefabUtility.GetPrefabAssetType(prefab) == PrefabAssetType.NotAPrefab)
             {
                 throw new InvalidOperationException($"The prefab could not be loaded: {path}");
-            }
-
-            if (prefab.GetComponentInChildren<ParticleSystem>(true) == null)
-            {
-                throw new InvalidOperationException($"The prefab has no ParticleSystem: {path}");
             }
 
             foreach (var transform in prefab.GetComponentsInChildren<Transform>(true))
@@ -172,3 +167,4 @@ namespace ParticleExporter.Editor
         }
     }
 }
+
