@@ -112,3 +112,7 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Imported development copy; canonical export samples live in the UPM package.
+/Assets/Samples/Prefab Package Exporter/
+/Assets/Samples/Prefab Package Exporter.meta

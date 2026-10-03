@@ -1,0 +1,19 @@
+{
+  "name": "com.kameryurdakull.prefab-exporter",
+  "version": "1.0.0",
+  "displayName": "Prefab Package Exporter",
+  "description": "Collect prefabs from multiple folders, preview their dependencies, and export a portable .unitypackage from the Unity Editor.",
+  "unity": "6000.3",
+  "keywords": ["prefab", "export", "editor", "unitypackage"],
+  "author": {
+    "name": "Kamer Yurdakul",
+    "url": "https://github.com/kameryurdakull"
+  },
+  "samples": [
+    {
+      "displayName": "Export Tests",
+      "description": "Three particle prefabs with a playback script and a shared material. Uses Universal Render Pipeline.",
+      "path": "Samples~/ExportTests"
+    }
+  ]
+}
