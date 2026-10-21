@@ -24,7 +24,7 @@ Unity 6000.3.15f1 üzerinde doğrulanmıştır. Aracın ek runtime kütüphane v
 3. Aşağıdaki URL'yi yapıştır:
 
 ```text
-https://github.com/kameryurdakull/PrefabExporter.git?path=/Packages/com.kameryurdakull.prefab-exporter
+https://github.com/kameryurdakull/unity-prefab-exporter.git?path=/Packages/com.kameryurdakull.prefab-exporter
 ```
 
 Bu URL, GitHub deposunun **PrefabExporter** adıyla yayınlandığını varsayar.
